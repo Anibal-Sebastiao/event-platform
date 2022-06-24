@@ -6,6 +6,19 @@ export interface ILesson {
     lessonType: 'class' | 'live'
 }
 
-export interface lessonQueryResponse{
+export interface IGetLessonQueryResponse{
     lessons: ILesson[] 
+}
+
+export interface IGetLessonBySlugResponse {
+    lesson: {
+        title: string;
+        videoId: string;
+        description: string;
+        teacher: {
+            avatarURL: string;
+            bio: string;
+            name: string;
+        }
+    }
 }
